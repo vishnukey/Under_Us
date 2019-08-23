@@ -1,4 +1,4 @@
-# Guilt Pheonix (temp name)
+# Guilty Pheonix (temp name)
 
 ## Our Alberta Game Jam Game
 
