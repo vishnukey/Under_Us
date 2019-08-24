@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class ColliderTrigger : MonoBehaviour
 {
-    [SerializeField] UnityEvent m_event;
+     [SerializeField] public UnityEvent m_event;
 
     private void Awake()
     {
