@@ -10,7 +10,8 @@ public class InfiniScroll : MonoBehaviour
     [SerializeField] Transform assets = null; // The assets to be scrolled up, when appropriate
     //[SerializeField] Transform player;
 
-    bool isPastBottom => transform.position.y < BOTTOM_DEPTH_CHECK;
+    bool isPastBottom => transform.position.y < BOTTOM_DEPTH_CHECK && !off;
+    public bool off = false;
 
     // Update is called once per frame
     void Update()

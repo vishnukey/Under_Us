@@ -14,7 +14,8 @@ public class ColliderTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        Debug.Log($"{name} hit {other.gameObject.name}");
+        if (other.CompareTag("Player")) 
             m_event.Invoke();
     }
 }
