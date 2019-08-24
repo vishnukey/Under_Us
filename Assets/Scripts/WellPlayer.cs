@@ -7,7 +7,9 @@ public class WellPlayer : MonoBehaviour {
 	public float friction = 0.1f;
 	float height = 0;
 	float speed = 0;
+	Vector3 startPos;
 	void Start() {
+		startPos = transform.localPosition;
 	}
 
 	void Update() {
@@ -17,6 +19,6 @@ public class WellPlayer : MonoBehaviour {
 		speed *= (1 - friction);
 		height += speed;
 		//if (height > 0) height = 0;
-		transform.localPosition = Vector3.up * height;
+		transform.localPosition = startPos + (Vector3.up * height);
 	}
 }
