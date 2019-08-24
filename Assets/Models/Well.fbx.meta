@@ -2,13 +2,7 @@ fileFormatVersion: 2
 guid: 8a29a12fd29ebba45b4684ad2dcceaf2
 ModelImporter:
   serializedVersion: 25
-  internalIDToNameTable:
-  - first:
-      74: 5536487430386102938
-    second: Well|WellAction
-  - first:
-      74: 5392588471017730961
-    second: Well|WellAction.001
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     importMaterials: 0
@@ -95,11 +89,7 @@ ModelImporter:
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
-<<<<<<< HEAD
     isReadable: 0
-=======
-    isReadable: 1
->>>>>>> f65250f3be25ca051a552f8fba3fb7976084c18b
   meshes:
     lODScreenPercentages: []
     globalScale: 1
@@ -151,7 +141,7 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 0
