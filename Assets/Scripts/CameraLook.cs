@@ -22,6 +22,11 @@ public class CameraLook : MonoBehaviour {
 			Cursor.lockState = CursorLockMode.None;
 		}
 
+		if (Input.GetKey(KeyCode.UpArrow)) rotationY += sensitivity * Time.deltaTime;
+		if (Input.GetKey(KeyCode.DownArrow)) rotationY -= sensitivity * Time.deltaTime;
+		if (Input.GetKey(KeyCode.LeftArrow)) rotationX -= sensitivity * Time.deltaTime;
+		if (Input.GetKey(KeyCode.RightArrow)) rotationX += sensitivity * Time.deltaTime;
+
 		rotationX += Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
 		rotationY += Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
 		rotationY = Mathf.Clamp(rotationY, -89.9f, 89.9f);
