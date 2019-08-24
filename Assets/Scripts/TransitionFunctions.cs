@@ -23,5 +23,6 @@ public class TransitionFunctions : Singleton<TransitionFunctions>
     {
         FindObjectOfType<CameraLook>().GetComponentInChildren<Rigidbody>().isKinematic = false;
         FindObjectOfType<RopeScroll>().gameObject.SetActive(false);
-    }
+		FindObjectOfType<Animator>().enabled = false;
+	}
 }
