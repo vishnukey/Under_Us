@@ -21,6 +21,7 @@ public class TransitionFunctions : Singleton<TransitionFunctions>
 
     public void TheFall()
     {
-        FindObjectOfType<WellPlayer>().gameObject.AddComponent<Rigidbody>();
+        FindObjectOfType<CameraLook>().GetComponentInChildren<Rigidbody>().isKinematic = false;
+        FindObjectOfType<RopeScroll>().gameObject.SetActive(false);
     }
 }
