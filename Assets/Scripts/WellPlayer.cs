@@ -17,6 +17,6 @@ public class WellPlayer : MonoBehaviour {
 		speed *= (1 - friction);
 		height += speed;
 		//if (height > 0) height = 0;
-		transform.position = Vector3.up * height;
+		transform.localPosition = Vector3.up * height;
 	}
 }
