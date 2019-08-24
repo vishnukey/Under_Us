@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -17,5 +18,14 @@ public class ColliderTrigger : MonoBehaviour
         Debug.Log($"{name} hit {other.gameObject.name}");
         if (other.CompareTag("Player")) 
             m_event.Invoke();
+    }
+
+    [DrawGizmo(GizmoType.NonSelected)]
+    static void DrawGizmoForMyScript(ColliderTrigger scr, GizmoType gizmoType)
+    {
+        Vector3 position = scr.transform.position;
+
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawCube(position, Vector3.one);
     }
 }
