@@ -2,8 +2,8 @@
 using UnityEngine;
 
 public class WellPlayer : MonoBehaviour {
-	public float sensitivity = 0.01f;
-	public float maxSpeed = 0.1f;
+	public float sensitivity = 0.6f;
+	public float maxSpeed = 6f;
 	public float friction = 0.1f;
 	float height = 0;
 	float speed = 0;
@@ -12,12 +12,12 @@ public class WellPlayer : MonoBehaviour {
 		startPos = transform.localPosition;
 	}
 
-	void Update() {
+	void FixedUpdate() {
 		//Cursor.lockState = CursorLockMode.Locked;
 		speed += Input.mouseScrollDelta.y * sensitivity;
 		speed = Mathf.Clamp(speed, -maxSpeed, maxSpeed);
 		speed *= (1 - friction);
-		height += speed;
+		height += speed * Time.deltaTime;
 		//if (height > 0) height = 0;
 		transform.localPosition = startPos + (Vector3.up * height);
 	}
