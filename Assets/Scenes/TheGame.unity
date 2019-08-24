@@ -5065,16 +5065,12 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-<<<<<<< HEAD
     - target: {fileID: 6039928290192550676, guid: 4994f0e6837298dae9ada198a8fbf1af,
         type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6039928290192550676, guid: 4994f0e6837298dae9ada198a8fbf1af,
-=======
-    - target: {fileID: 6669746464546079470, guid: 4994f0e6837298dae9ada198a8fbf1af,
->>>>>>> b90722c8cb36be522f0269092b599b5e00ba94d7
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
