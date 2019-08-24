@@ -59,6 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sensitivity: 60
+  maxAngle: 80
 --- !u!1 &6039928290192550699
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,8 +105,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7cc0067faaabf14cb9f5304aff9f20e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 0.6
-  maxSpeed: 6
+  sensitivity: 1
+  maxSpeed: 10
   friction: 0.1
 --- !u!1 &6301694727570214148
 GameObject:

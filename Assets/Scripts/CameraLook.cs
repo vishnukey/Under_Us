@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraLook : MonoBehaviour {
 	public float sensitivity = 60f;
+	public float maxAngle = 80f;
 	float rotationY = 0.0f;
 	float rotationX = 0.0f;
 
@@ -29,7 +30,7 @@ public class CameraLook : MonoBehaviour {
 
 		rotationX += Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
 		rotationY += Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
-		rotationY = Mathf.Clamp(rotationY, -89.9f, 89.9f);
+		rotationY = Mathf.Clamp(rotationY, -maxAngle, maxAngle);
 		transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
 	}
 }
