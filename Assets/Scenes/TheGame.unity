@@ -52,7 +52,7 @@ LightmapSettings:
     m_AlbedoBoost: 1
     m_EnvironmentLightingMode: 0
     m_EnableBakedLightmaps: 0
-    m_EnableRealtimeLightmaps: 1
+    m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
     serializedVersion: 12
     m_Resolution: 2
@@ -4565,11 +4565,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Well Prefab
       objectReference: {fileID: 0}
-    - target: {fileID: 1691262333019392241, guid: 200e6d15a1780d646be699f86d2363b1,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 1192055324455470203, guid: 200e6d15a1780d646be699f86d2363b1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4624,10 +4619,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 150227209, guid: 200e6d15a1780d646be699f86d2363b1, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 200e6d15a1780d646be699f86d2363b1, type: 3}
