@@ -12,6 +12,6 @@ public class WellPlayer : MonoBehaviour {
 		//Cursor.lockState = CursorLockMode.Locked;
 		height += Input.mouseScrollDelta.y * climbSpeed;
 		if (height > 0) height = 0;
-		transform.position = Vector3.up * height;
+		transform.localPosition = Vector3.up * height;
 	}
 }
