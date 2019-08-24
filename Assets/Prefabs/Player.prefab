@@ -88,6 +88,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7cc0067faaabf14cb9f5304aff9f20e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 0.01
-  maxSpeed: 0.1
+  sensitivity: 0.6
+  maxSpeed: 6
   friction: 0.1
