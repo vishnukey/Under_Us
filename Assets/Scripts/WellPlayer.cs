@@ -2,24 +2,28 @@
 using UnityEngine;
 
 public class WellPlayer : MonoBehaviour {
+    const float epsilon = 0.0001f; // A value close enough to zero to consider it zero
 	public float sensitivity = 0.6f;
 	public float maxSpeed = 6f;
 	public float friction = 0.1f;
-	float height = 0;
+	float height = 0; // !!UNUSED!!
 	float speed = 0;
-	Vector3 startPos;
+	Vector3 startPos; // !!UNUSED!!
 	void Start() {
 		startPos = transform.localPosition;
 	}
 
 	void FixedUpdate() {
 		speed += Input.mouseScrollDelta.y * sensitivity;
-		speed = Mathf.Clamp(speed, -maxSpeed, maxSpeed);
 		speed *= (1 - friction);
-		height += speed * Time.deltaTime;
-		if (Input.GetKey(KeyCode.PageUp)) height += maxSpeed * Time.deltaTime;
-		if (Input.GetKey(KeyCode.PageDown)) height -= maxSpeed * Time.deltaTime;
+		speed = Mathf.Clamp(speed, -maxSpeed, maxSpeed);
+        speed = Mathf.Abs(speed) < epsilon ? 0 : speed; // If the speed is small enough, just set it to zero
+        //height += speed * Time.deltaTime;
+        float delta; // amount to move this frame
+        delta = speed * Time.deltaTime;
+		if (Input.GetKey(KeyCode.PageUp)) delta = maxSpeed * Time.deltaTime;
+		if (Input.GetKey(KeyCode.PageDown)) delta = -maxSpeed * Time.deltaTime;
 		//if (height > 0) height = 0;
-		transform.localPosition = startPos + (Vector3.up * height);
+		transform.localPosition += (Vector3.up * delta); // move by that amount int the vertical direction
 	}
 }
