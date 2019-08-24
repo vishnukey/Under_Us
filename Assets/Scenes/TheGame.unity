@@ -5308,7 +5308,12 @@ PrefabInstance:
     - target: {fileID: 6284553794896094906, guid: 4994f0e6837298dae9ada198a8fbf1af,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6518095216633328474, guid: 4994f0e6837298dae9ada198a8fbf1af,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4994f0e6837298dae9ada198a8fbf1af, type: 3}
@@ -5325,7 +5330,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6039928289054914101}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7f6bdce372491349ba27be4ad198fc4, type: 3}
   m_Name: 
