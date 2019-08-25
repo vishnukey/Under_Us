@@ -5,50 +5,32 @@ using UnityEngine;
 
 public class LightController : Singleton<LightController>
 {
-    bool on = true;
     public Animator flickerAnimator;
+	public new Light light;
 
-    private AudioSource audioSource;
-
-    public bool ovveride = false;
+	private AudioSource audioSource;
 
     private void Start()
     {
-        audioSource = GetComponent<AudioSource>();   
-    }
+        audioSource = GetComponent<AudioSource>();
+		light = GetComponent<Light>();
+	}
 
     void Update()
     {
         if (Input.GetMouseButtonDown(1))
         {
-            Toggle();
-            if(!audioSource.isPlaying)
+			light.enabled = !light.enabled;
+			if(!audioSource.isPlaying)
                 audioSource.Play();
         }
     }
 
-    public void Toggle()
-    {
-        if (ovveride) return;
-
-
-        if (on)
-            flickerAnimator.SetTrigger("Off");
-        else
-            flickerAnimator.SetTrigger("On");
-
-        on = !on;
+    public void LightOn() {
+		flickerAnimator.SetTrigger("On");
     }
 
-    public void LightOn()
-    {
-        if (!on)
-            Toggle();
-    }
-
-    public void LighOff()
-    {
-        if (on)
-            Toggle();
+    public void LighOff() {
+		flickerAnimator.SetTrigger("Off");
     }
 }
