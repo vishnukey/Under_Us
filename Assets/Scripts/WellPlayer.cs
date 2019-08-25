@@ -2,6 +2,7 @@
 using UnityEngine;
 
 public class WellPlayer : MonoBehaviour {
+    [SerializeField] bool canScrollUp = false;
 	const float epsilon = 0.0001f; // A value close enough to zero to consider it zero
 	public float sensitivity = 0.6f;
 	public float maxSpeed = 6f;
@@ -26,6 +27,9 @@ public class WellPlayer : MonoBehaviour {
 		delta = speed * Time.deltaTime;
 		if (Input.GetKey(KeyCode.PageUp)) delta = maxSpeed * Time.deltaTime;
 		if (Input.GetKey(KeyCode.PageDown)) delta = -maxSpeed * Time.deltaTime;
+
+        delta = canScrollUp ? delta : Mathf.Clamp(delta, -Mathf.Infinity, 0);
+
 		_height += delta;
 
 		transform.localPosition += (Vector3.up * delta); // move by that amount int the vertical direction

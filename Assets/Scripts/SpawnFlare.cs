@@ -9,12 +9,20 @@ public class SpawnFlare : MonoBehaviour
     [SerializeField] float strength = 2f;
     [MinMax(-3, 3, MaxLimit = 5, MinLimit = -5, ShowDebugValues = true)]
     [SerializeField] Vector2 torque;
+    [SerializeField] float timeOut_s;
+    float chronalAcumulator = Mathf.Infinity;
 
     // Update is called once per frame
     void Update()
     {
         // TODO: Use input manager
-        if (Input.GetKeyDown("q") || Input.GetMouseButtonDown(0)) Throw();
+        if (
+            (Input.GetKeyDown("q") || Input.GetMouseButtonDown(0)) &&
+            chronalAcumulator > timeOut_s
+            ) Throw();
+
+        chronalAcumulator += Time.deltaTime;
+
     }
 
     void Throw()
@@ -24,5 +32,6 @@ public class SpawnFlare : MonoBehaviour
         theFlare.AddForce(transform.forward * strength);
         theFlare.AddTorque(Random.onUnitSphere * Random.Range(torque.x, torque.y));
         Destroy(theFlare.gameObject, 10f);
+        chronalAcumulator = 0;
     }
 }
