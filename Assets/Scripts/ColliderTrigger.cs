@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class ColliderTrigger : MonoBehaviour
 {
-     [SerializeField] public UnityEvent m_event;
+     [SerializeField] UnityEvent m_event;
 
     private void Awake()
     {
@@ -15,17 +15,10 @@ public class ColliderTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log($"{name} hit {other.gameObject.name}");
-        if (other.CompareTag("Player")) 
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log($"{name} hit {other.gameObject.name}");
             m_event.Invoke();
-    }
-
-    [DrawGizmo(GizmoType.NonSelected)]
-    static void DrawGizmoForMyScript(ColliderTrigger scr, GizmoType gizmoType)
-    {
-        Vector3 position = scr.transform.position;
-
-        Gizmos.color = Color.cyan;
-        Gizmos.DrawCube(position, Vector3.one);
+        }
     }
 }
