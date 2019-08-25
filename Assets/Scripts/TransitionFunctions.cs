@@ -5,6 +5,10 @@ using System.Linq;
 
 public class TransitionFunctions : Singleton<TransitionFunctions>
 {
+    public Light headLamp;
+    public List<GameObject> wellWalls;
+    public Animator flickerAnimator;
+
     public void Foo()
     {
         Debug.Log("Fooooo");
@@ -21,8 +25,34 @@ public class TransitionFunctions : Singleton<TransitionFunctions>
 
     public void TheFall()
     {
-        FindObjectOfType<CameraLook>().GetComponentInChildren<Rigidbody>().isKinematic = false;
-        FindObjectOfType<RopeScroll>().gameObject.SetActive(false);
-		FindObjectOfType<Animator>().enabled = false;
-	}
+            FindObjectsOfType<RopeBreak>().ToList().ForEach(x => {
+			x.BreakRope();
+		});
+    }
+
+    public void Flicker()
+    {
+        flickerAnimator.SetTrigger("flicker");
+    }
+
+    public void LightsOut()
+    {
+        headLamp.gameObject.SetActive(false);
+    }
+
+    public void LightsOn()
+    {
+        headLamp.gameObject.SetActive(true);
+    }
+
+    public void WellOut()
+    {
+        wellWalls.ForEach(wall => wall.SetActive(false));
+    }
+
+    public void WellOn()
+    {
+        wellWalls.ForEach(wall => wall.SetActive(false));
+    }
+
 }
