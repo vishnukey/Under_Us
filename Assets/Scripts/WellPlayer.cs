@@ -1,7 +1,7 @@
 ﻿
 using UnityEngine;
 
-public class WellPlayer : MonoBehaviour {
+public class WellPlayer : Singleton<WellPlayer> {
     [SerializeField] bool canScrollUp = false;
 	const float epsilon = 0.0001f; // A value close enough to zero to consider it zero
 	public float sensitivity = 0.6f;
