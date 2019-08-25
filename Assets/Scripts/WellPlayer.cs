@@ -8,7 +8,7 @@ public class WellPlayer : MonoBehaviour {
 	public float maxSpeed = 6f;
 	public float friction = 0.1f;
 	public float height { get { return _height; } }
-	float _height = 0;
+	public float _height = 0;
 	float speed = 0;
 	Vector3 startPos; // !!UNUSED!!
 
