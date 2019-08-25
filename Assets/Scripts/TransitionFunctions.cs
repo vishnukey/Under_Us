@@ -29,21 +29,14 @@ public class TransitionFunctions : Singleton<TransitionFunctions>
 		});
     }
 
-    public void Flicker()
-    {
-        LightController.Instance.Toggle();
-    }
-
     public void LightOn()
     {
         LightController.Instance.LightOn();
-        LightController.Instance.ovveride = false;
     }
 
     public void LighOff()
     {
         LightController.Instance.LighOff();
-        LightController.Instance.ovveride = true;
     }
 
     public void WellOut()
