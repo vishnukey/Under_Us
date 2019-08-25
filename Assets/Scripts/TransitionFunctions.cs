@@ -52,7 +52,7 @@ public class TransitionFunctions : Singleton<TransitionFunctions>
 
     public void WellOn()
     {
-        wellWalls.ForEach(wall => wall.SetActive(false));
+        wellWalls.ForEach(wall => wall.SetActive(true));
     }
 
 }
