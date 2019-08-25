@@ -17,6 +17,8 @@ public class SpawnFlare : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (WellPlayer.Instance.height > -65f) return;
+
         if (chronalAcumulator > timeOut_s && !played)
         {
             played = true;

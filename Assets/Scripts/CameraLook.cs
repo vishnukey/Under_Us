@@ -6,7 +6,7 @@ public class CameraLook : MonoBehaviour {
 	public float sensitivity = 60f;
 	public float maxAngle = 80f;
 	float rotationY = 0.0f;
-	float rotationX = 0.0f;
+	float rotationX = -57;
 
 	bool mouseLock = false;
 	void Start() {
