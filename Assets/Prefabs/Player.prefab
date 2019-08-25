@@ -5613,6 +5613,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sensitivity: 60
   maxAngle: 80
+  mouseLock: 1
+  allowUnlock: 0
 --- !u!1 &5611791761888236002
 GameObject:
   m_ObjectHideFlags: 0
