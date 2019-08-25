@@ -10,6 +10,8 @@ public class LightController : Singleton<LightController>
 
     private AudioSource audioSource;
 
+    public bool ovveride = false;
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();   
@@ -27,6 +29,9 @@ public class LightController : Singleton<LightController>
 
     public void Toggle()
     {
+        if (ovveride) return;
+
+
         if (on)
             flickerAnimator.SetTrigger("Off");
         else

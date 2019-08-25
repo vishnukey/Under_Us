@@ -12,9 +12,17 @@ public class SpawnFlare : MonoBehaviour
     [SerializeField] float timeOut_s;
     float chronalAcumulator = Mathf.Infinity;
 
+    bool played = true;
+
     // Update is called once per frame
     void Update()
     {
+        if (chronalAcumulator > timeOut_s && !played)
+        {
+            played = true;
+            GetComponent<AudioSource>().Play();
+        }
+
         // TODO: Use input manager
         if (
             (Input.GetKeyDown("q") || Input.GetMouseButtonDown(0)) &&
@@ -33,5 +41,6 @@ public class SpawnFlare : MonoBehaviour
         theFlare.AddTorque(Random.onUnitSphere * Random.Range(torque.x, torque.y));
         Destroy(theFlare.gameObject, 10f);
         chronalAcumulator = 0;
+        played = false;
     }
 }
