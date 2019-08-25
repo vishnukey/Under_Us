@@ -8,14 +8,15 @@ public class CameraLook : MonoBehaviour {
 	float rotationY = 0.0f;
 	float rotationX = -57;
 
-	bool mouseLock = false;
+	public bool mouseLock = true;
+	public bool allowUnlock = false;
 	void Start() {
 
 	}
 
 	// Update is called once per frame
 	void Update() {
-		if (Input.GetKeyDown(KeyCode.Tab)) mouseLock = !mouseLock;
+		if(allowUnlock && Input.GetKeyDown(KeyCode.Tab)) mouseLock = !mouseLock;
 
 		if (mouseLock) {
 			Cursor.lockState = CursorLockMode.Locked;
