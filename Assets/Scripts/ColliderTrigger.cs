@@ -8,6 +8,11 @@ public class ColliderTrigger : MonoBehaviour
 {
      [SerializeField] UnityEvent m_event;
 
+    private void Start()
+    {
+        
+    }
+
     private void Awake()
     {
         if (m_event == null) m_event = new UnityEvent();

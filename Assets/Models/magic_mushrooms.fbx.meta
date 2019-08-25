@@ -3,7 +3,82 @@ guid: 175e075d32ee285459b62cfe851c8dbc
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mushroom_Cap
+    second: {fileID: 2100000, guid: 145e2d51b96449e44a4f5b59b2de408a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mushroom_Cap.001
+    second: {fileID: 2100000, guid: 3896c41375da13b438156bf0c2501f35, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mushroom_Cap.002
+    second: {fileID: 2100000, guid: fe9a1f180da6786479bc63d6a15da730, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mushroom_Cap.003
+    second: {fileID: 2100000, guid: c6df869b9d48f4948a04fa2967b4bcbd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mushroom_Cap.004
+    second: {fileID: 2100000, guid: dbcc374f307685441bf821d997c21b5e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mushroom_Spot
+    second: {fileID: 2100000, guid: 8fcb841b8e8f10e4baeaff9e3012b06b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mushroom_Spot.001
+    second: {fileID: 2100000, guid: 4cb5e035ba504b14e9206a2f8bdc55b3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mushroom_Spot.002
+    second: {fileID: 2100000, guid: 3e328c3ca409a254cb1cb12f469d5c5f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mushroom_Spot.003
+    second: {fileID: 2100000, guid: dab97499cba20b64f93554808a730145, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mushroom_Spot.004
+    second: {fileID: 2100000, guid: d8821b8899627f74fa8d3500f874df8d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mushroom_Stalk
+    second: {fileID: 2100000, guid: a5e91ec19f15bdb4aa7fbeec59aef55f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mushroom_Stalk.001
+    second: {fileID: 2100000, guid: 1ae8ea0657cd01e488f95f4874492efb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mushroom_Stalk.002
+    second: {fileID: 2100000, guid: 959b814a85d203946bbc4255c995f987, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mushroom_Stalk.003
+    second: {fileID: 2100000, guid: 084e7a04856087345beaf286fb1d67dd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mushroom_Stalk.004
+    second: {fileID: 2100000, guid: 641354e156a36564da172d5a6317088c, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

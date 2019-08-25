@@ -7,7 +7,6 @@ public class TransitionFunctions : Singleton<TransitionFunctions>
 {
     public Light headLamp;
     public List<GameObject> wellWalls;
-    public Animator flickerAnimator;
 
     public void Foo()
     {
@@ -32,17 +31,17 @@ public class TransitionFunctions : Singleton<TransitionFunctions>
 
     public void Flicker()
     {
-        flickerAnimator.SetTrigger("flicker");
+        LightController.Instance.Toggle();
     }
 
-    public void LightsOut()
+    public void LightOn()
     {
-        headLamp.gameObject.SetActive(false);
+        LightController.Instance.LightOn();
     }
 
-    public void LightsOn()
+    public void LighOff()
     {
-        headLamp.gameObject.SetActive(true);
+        LightController.Instance.LighOff();
     }
 
     public void WellOut()
